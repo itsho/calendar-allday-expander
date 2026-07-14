@@ -1,0 +1,23 @@
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor / IDE
+.vscode/
+.idea/
+*.swp
+*~
+
+# Node (if tooling is added later)
+node_modules/
+npm-debug.log*
+
+# Chrome Web Store packaging artifacts
+*.zip
+*.crx
+*.pem
+
+# Store listing assets (not part of the published package)
+screenshots/
+store-assets/

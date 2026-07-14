@@ -1,0 +1,29 @@
+{
+  "manifest_version": 3,
+  "name": "Google Calendar All-Day Expander",
+  "description": "Expand or resize Google Calendar's all-day events strip so all-day events hidden behind the hourly grid become visible.",
+  "version": "3.0.2026.198",
+  "offline_enabled": true,
+  "icons": {
+    "32": "images/if_calendar_32.png",
+    "128": "images/if_calendar_128.png"
+  },
+  "options_ui": {
+    "page": "about.html"
+  },
+  "action": {
+    "default_icon": "images/if_calendar_32.png",
+    "default_popup": "index.html",
+    "default_title": "Expand Google Calendar's all-day events area"
+  },
+  "permissions": [
+    "storage"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["https://calendar.google.com/calendar/*"],
+      "js": ["app/content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}

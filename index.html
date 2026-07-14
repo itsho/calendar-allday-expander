@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Google Calendar All-Day Expander</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+
+<body>
+    <div class="popup">
+        <header class="popup__header">
+            <img class="popup__icon" src="images/if_magic_64.png" alt="Google Calendar All-Day Expander" />
+            <h1 class="popup__title">All-Day Expander</h1>
+        </header>
+
+        <p class="popup__desc">
+            Google Calendar caps the height of the <strong>all-day events</strong> strip at
+            the top of the day/week view. When you have many all-day items, the extra ones get
+            hidden behind the hourly grid below. This expands that strip so you can see them all.
+        </p>
+
+        <div class="popup__actions">
+            <button id="btnRemoveHoursPart" class="popup__button" aria-pressed="false">
+                <span class="popup__glyph" aria-hidden="true">&#8661;</span>
+                <span id="btnLabel">Expand all-day area</span>
+            </button>
+            <button id="btnDragHandle" class="popup__button" aria-pressed="false">
+                <span class="popup__glyph" aria-hidden="true">&#9776;</span>
+                <span id="dragLabel">Enable drag handle</span>
+            </button>
+        </div>
+
+        <p id="status" class="popup__status" role="status"></p>
+
+        <p class="popup__note">
+            Each button is a toggle &mdash; click it again to turn it off, and only one can
+            be on at a time. Your choice is remembered and re-applied automatically the next
+            time the calendar loads.
+        </p>
+    </div>
+
+    <script type="text/javascript" src="app/popup.js"></script>
+</body>
+
+</html>
